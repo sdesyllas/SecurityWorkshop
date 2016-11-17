@@ -1,0 +1,65 @@
+﻿@model SecurityWokshop.Models.CreditCardModel
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm()) 
+{
+    <div class="form-horizontal">
+        <h4>CreditCardModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Name">Name</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Name" name="Name" type="text" value="">
+                @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Number">Number</label>
+            <div class="col-md-10">
+               <input class="form-control text-box single-line" id="Number" name="Number" type="text" value="">
+                @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="ExpiryMonth">Expiry Month</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="ExpiryMonth" name="ExpiryMonth" type="text" value="">
+                @Html.ValidationMessageFor(model => model.ExpiryMonth, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="ExpiryYear">Expiry Year</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="ExpiryYear" name="ExpiryYear" type="text" value="">
+                @Html.ValidationMessageFor(model => model.ExpiryYear, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Cvv">CVV</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Cvv" name="Cvv" type="text" value="">
+                @Html.ValidationMessageFor(model => model.Cvv, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

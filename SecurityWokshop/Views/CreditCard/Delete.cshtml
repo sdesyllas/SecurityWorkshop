@@ -1,0 +1,60 @@
+﻿@model SecurityWokshop.Models.CreditCardModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Name
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Name)
+        </dd>
+
+        <dt>
+            Number
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Number)
+        </dd>
+
+        <dt>
+            Expiry Month
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.ExpiryMonth)
+        </dd>
+
+        <dt>
+            ExpiryYear
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.ExpiryYear)
+        </dd>
+
+        <dt>
+            CVV
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Cvv)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

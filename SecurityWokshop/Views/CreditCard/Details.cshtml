@@ -1,0 +1,58 @@
+﻿@model SecurityWokshop.Models.CreditCardModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreditCardModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Name
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Name)
+        </dd>
+
+        <dt>
+            Number
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Number)
+        </dd>
+
+        <dt>
+            Expiry Month
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.ExpiryMonth)
+        </dd>
+
+        <dt>
+            Expiry Year
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.ExpiryYear)
+        </dd>
+
+        <dt>
+            CVV
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Cvv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
