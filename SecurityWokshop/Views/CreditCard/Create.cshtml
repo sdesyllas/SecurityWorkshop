@@ -15,7 +15,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="Name">Name</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="Name" name="Name" type="text" value="">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new {@class = "form-control text-box single-line" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
             </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="Number">Number</label>
             <div class="col-md-10">
-               <input class="form-control text-box single-line" id="Number" name="Number" type="text" value="">
+                @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form-control text-box single-line" } })
                 @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="ExpiryMonth">Expiry Month</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="ExpiryMonth" name="ExpiryMonth" type="text" value="">
+                @Html.EditorFor(model => model.ExpiryMonth, new { htmlAttributes = new { @class = "form-control text-box single-line" } })
                 @Html.ValidationMessageFor(model => model.ExpiryMonth, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -39,7 +39,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="ExpiryYear">Expiry Year</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="ExpiryYear" name="ExpiryYear" type="text" value="">
+                @Html.EditorFor(model => model.ExpiryYear, new { htmlAttributes = new { @class = "form-control text-box single-line" } })
                 @Html.ValidationMessageFor(model => model.ExpiryYear, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -47,7 +47,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="Cvv">CVV</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="Cvv" name="Cvv" type="text" value="">
+                @Html.EditorFor(model => model.Cvv, new { htmlAttributes = new { @class = "form-control text-box single-line" } })
                 @Html.ValidationMessageFor(model => model.Cvv, "", new { @class = "text-danger" })
             </div>
         </div>

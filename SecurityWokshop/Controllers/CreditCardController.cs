@@ -36,10 +36,18 @@ namespace SecurityWokshop.Controllers
         {
             try
             {
-                var creditCardRepo = new CreditCardRepo(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
-                creditCardRepo.AddCard(model);
+                if (ModelState.IsValid)
+                {
+                    var creditCardRepo =
+                        new CreditCardRepo(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+                    creditCardRepo.AddCard(model);
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View(model);
+                }
             }
             catch
             {
@@ -62,9 +70,17 @@ namespace SecurityWokshop.Controllers
         {
             try
             {
-                var creditCardRepo = new CreditCardRepo(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
-                creditCardRepo.UpdateCard(model);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var creditCardRepo =
+                        new CreditCardRepo(ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+                    creditCardRepo.UpdateCard(model);
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View(model);
+                }
             }
             catch
             {
