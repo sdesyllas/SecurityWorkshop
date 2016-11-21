@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Web.Mvc;
 using SecurityWokshop.DataAccess;
 using SecurityWokshop.Models;
@@ -82,7 +83,7 @@ namespace SecurityWokshop.Controllers
                     return View(model);
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 return View();
             }

@@ -7,7 +7,6 @@ namespace SecurityWokshop.Models
         public int Id { get; set; }
 
         [Required]
-        [DataType(DataType.Text, ErrorMessage = "Invalid Name")]
         public string Name { get; set; }
 
         [Required]
